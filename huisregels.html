@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>Klimzaal Balance</title>
+    <meta name="description" content="Boulderzaal Balance in Gent; voor echte klimmers, goeie routes en gezellige sfeer. Welkom!">
+    <meta name="author" content="Sander De la Marche">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.png" alt="Het logo van klimzaal Balance"/></a>
+        <h1>Klimzaal Balance</h1>
+        <p class="subtitle">Voor echte klimmers, goeie routes en gezellige sfeer. Welkom!</p>
+    </header>
+    <div class="campus">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <nav>
+        <a class="active" href="index.html">Home</a>
+        <a class="highlight" href="uitslagen.html">Uitslagen BNYC</a>
+        <a href="praktisch.html">Praktisch</a>
+        <a href="fotos.html">Foto's</a>
+        <a href="huisregels.html">Huisregels</a>
+        <a href="team.html">Team</a>
+        <a href="bbt.html">Balance Bouldering Team</a>
+    </nav>
+    <main>
+        <section class="content">
+        	<h1>Huisregels</h1>
+        	<p>Boulderen is een sport waar respect centraal staat. Onze huisregels zijn erop gericht om het voor iedereen zo aangenaam mogelijk te maken.</p>
+        	<ul>
+				<li>Aanmelden bij binnenkomst is verplicht. Vriendelijk gedag zeggen als je weer vertrekt mag uiteraard ook.</li>
+				<li>Boulder veilig en verantwoord: niet onder andere klimmers lopen of klimmen en ook zijdelings voldoende afstand houden bij het klimmen.</li>
+				<li>Dragen van sieraden of horloges is gevaarlijk en dus niet toegestaan.</li>
+				<li>Hou het netjes. Geen pofzakken op de rug. Eten en drinken zijn niet toegelaten in het klimgedeelte.</li>
+				<li>Een klimzaal is geen speeltuin. Lopen, gymnastiek en vechtsporten worden elders beoefend.</li>
+				<li>Kinderen vanaf 6 tot 12 jaar klimmen steeds onder <strong>actieve</strong> begeleiding (minimum 1 begeleider per twee kinderen, behalve groepen op reservatie buiten de normale openingsuren). Kinderen onder 6 jaar niet toegelaten.</li>
+				<li>Geen huisdieren toegelaten.</li>
+				<li>Niet klimmen op blote voeten of sokken. Om een degelijke klimtechniek aan te leren zijn klimschoenen sterk aan te raden. Het enige alternatief dat wij aanvaarden zijn witte turnpantoffels. Alle andere schoenen verhogen het risico op blessures en zijn dus niet toegestaan. Bovendien laten deze onuitwisbare sporen na in de klimzaal.</li>
+				<li>Klimmen gebeurt op eigen risico. Een klimverzekering afsluiten is een goed idee.</li>
+				<li>Elke klimmer verklaart zich door zijn aanwezigheid akkoord met deze huisregels</li>
+			</ul>
+        </section>
+    </main>
+    <footer>
+        <div class="contact">
+            <a href="mailto:info@klimzaalbalance.be">info@klimzaalbalance.be</a>
+            <a href="https://www.google.com/maps/place/Klimzaal+Balance/@51.0411413,3.7426313,17z/data=!3m1!4b1!4m5!3m4!1s0x47c376a95326d28f:0x468f112340355b5e!8m2!3d51.0411379!4d3.74482" target="_blank">Louis Van Houttestraat 109, 9050 Ledeberg (Gent)</a>
+            <a href="tel:0493 56 24 04">0493 56 24 04</a>
+            <p>Ma - Vr: 17u00 -> 23u00 | Zo: 14u00 -> 23u00
+        </div>
+        <p class="credit">Site by x</p>
+    </footer>
+    <script>
+        const campus = document.querySelector(".campus");
+        campus.addEventListener("click", function() {
+          campus.parentNode.querySelector('nav').classList.toggle("open");
+        });
+    </script>
+</body>
+</html>

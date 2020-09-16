@@ -1,0 +1,326 @@
+/*
+ * Reset
+ */
+
+ * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*
+ * Variables
+ */
+
+ :root {
+	/* Colors */
+	--mine-shaft: #212121;
+	--dust: #9c9c9c;
+	--crimson: #e5221b;
+	--mercury: #e8e8e8;
+
+	--text: var(--mine-shaft);
+	--accent: var(--crimson);
+
+	/* Spacing */
+	--double: calc(var(--default) * 2);
+	--default: 3rem;
+	--half: calc(var(--default) / 2);
+}
+
+/*
+ * Basics
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	color: var(--text);
+	background-color: var(--mercury);
+	font-size: clamp(1.25em, 4vw, 1.5em);;
+	line-height: 1.5;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+	padding: var(--default);
+}
+
+a {
+	display: inline-block;
+	color: var(--mine-shaft);
+}
+
+.main ul {
+	margin-left: 2.5rem;
+}
+
+li + li {
+	margin-top: .5rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+/*
+ * Typo
+ */
+
+ h1, h2, h3, h4, h5 {
+	line-height: 1;
+	margin-bottom: 1rem;
+}
+
+.info {
+	font-style: italic;
+	color: #666;
+}
+
+.info:before {
+	content: "* ";
+	color: var(--accent);
+}
+
+.col a {
+	color: #e8e8e8;
+}
+
+/*
+ * Layout
+ */
+
+ header {
+   margin-bottom: var(--default);
+}
+
+main {
+	padding: var(--default) 0;
+	max-width: 80rem;
+	display: flex;
+}
+
+section > * + * {
+	margin-top: var(--half);
+}
+
+section + section {
+	margin-left: var(--default);
+}
+
+.content {
+	max-width: 40rem;
+}
+
+.spotlight img {
+	box-shadow: 10px 10px 0 rgba(0,0,0,.2);
+}
+
+/* Header */
+
+header {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+header > h1 {
+	font-weight: 900;
+	font-size: 5rem;
+}
+
+header img {
+	height: 4rem;
+	width: 4rem;
+	margin: .5rem var(--half) 0 0;
+}
+
+.subtitle {
+	width: 100%;
+}
+
+/*
+ * Holds!
+ */
+
+section ul {
+   list-style: none;
+   margin-left: 2.5rem;
+}
+
+section li {
+	position: relative;
+}
+
+li + li {
+	margin-top: .5rem;
+}
+
+section li:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: .3rem;
+	left: -2.5rem;
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+section li:nth-child(odd):before {
+	background: url(images/hold.png) no-repeat center/cover;
+}
+
+section li:nth-child(even):before {
+	background: url(images/hold2.png) no-repeat center/cover;
+}
+
+section li:nth-child(3n+3):before {
+	background: url(images/hold3.png) no-repeat center/cover;
+}
+
+.price {
+	float: right;
+}
+
+/*
+ * Navigation
+ */
+
+nav {
+   display: flex;
+}
+
+nav a {
+	color: var(--mercury);
+	text-decoration: none;
+	background-color: var(--mine-shaft);
+	box-shadow: 10px 10px 0 rgba(0,0,0,.2);
+	padding: var(--half) 0 var(--half) var(--half);
+}
+
+nav a:last-of-type {
+	padding-right: var(--half);
+}
+
+.highlight {
+	color: var(--accent);
+}
+
+.open {
+	display: block;
+}
+
+.campus {
+	display: none;
+	padding: var(--half);
+	background-color: #c9ba93;
+	border-radius: var(--half);
+}
+
+.bar {
+	height: 7.5px;
+	width: 100%;
+	background-color: #B19B62;
+	box-shadow: 0px 2px 0px #837141;
+	border-radius: 5px;
+}
+
+.bar + .bar {
+	margin-top: .5rem;
+}
+
+/* Footer */
+
+.contact {
+	display: flex;
+	flex-wrap: wrap;
+	padding: var(--default);
+	color: var(--mercury);
+	background-color: var(--mine-shaft);
+	box-shadow: 10px 10px 0 rgba(0,0,0,.2);
+}
+
+.contact > * {
+	width: 50%;
+	padding: var(--half);
+}
+
+.contact a {
+	color: var(--mercury);
+}
+
+.credit {
+	margin-top: 2rem;
+	font-size: 1rem;
+	color: var(--dust);
+}
+
+/*
+ * Blog
+ */
+
+.meta {
+	color: var(--dust);
+	font-size: 1rem;
+}
+
+/*
+ * Fun stuff
+ */
+
+ ::selection {
+	background-color: var(--accent);
+	color: #fff;
+}
+
+/*
+ * Mobile
+ */
+
+ @media screen and (max-width: 40rem) {
+
+	:root {
+		/* Spacing */
+		--double: calc(var(--default) * 2);
+		--default: 1.5rem;
+		--half: calc(var(--default) / 2);
+	}
+
+	header img {
+		height: 2rem;
+		width: 2rem;
+		margin: 0 1rem 0 0;
+	}
+
+	header > h1 {
+		font-size: 2rem;
+	}
+
+	.campus {
+		display: block;
+	}
+
+	nav {
+		flex-direction: column;
+		display: none;
+	}
+
+	nav a {
+		width: 100%;
+		text-align: center;
+	}
+
+	main {
+		flex-direction: column;
+	}
+
+	section + section {
+		margin-left: 0;
+		margin-top: var(--default);
+	}
+
+	.contact > * {
+		width: 100%;
+	}
+
+}
+
+/* ~ The end ~ */
