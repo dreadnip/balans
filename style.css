@@ -229,9 +229,13 @@ nav a:last-of-type {
 
 /* Footer */
 
+footer {
+	align-self: flex-start;
+}
+
 .contact {
 	display: flex;
-	flex-wrap: wrap;
+	align-items: center;
 	padding: var(--half);
 	color: var(--mercury);
 	background-color: var(--mine-shaft);
@@ -239,7 +243,6 @@ nav a:last-of-type {
 }
 
 .contact > * {
-	width: 50%;
 	padding: var(--half);
 }
 
@@ -317,8 +320,12 @@ nav a:last-of-type {
 		margin-top: var(--default);
 	}
 
-	.contact > * {
-		width: 100%;
+	footer {
+		align-self: stretch;
+	}
+
+	.contact {
+		flex-direction: column;
 	}
 
 }
